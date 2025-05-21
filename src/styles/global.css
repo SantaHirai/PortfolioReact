@@ -1,0 +1,320 @@
+@font-face {
+    font-family: "misaki_gothic_2nd";
+    src: url("../assets/fonts/misaki_gothic_2nd.ttf") format("truetype"); /* パス修正 */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NotoSansJP";
+    src: url("../assets/fonts/NotoSansJP-Medium.ttf") format("truetype"); /* パス修正 */
+    font-display: swap;
+}
+.dq-window-11 {
+    background-color: #333333;
+    padding: 0.15rem;
+    margin-top: 110px;
+    margin-bottom: 110px
+}
+
+.dq-window-21 {
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+}
+
+.dq-window-31 {
+    color: white;
+    background-color: #333333;;
+    border-radius: 0.3rem;
+    padding: 1.0rem 0.75rem;
+    line-height: 2;
+}
+
+.dq-window-1 {
+    background-color: #333333;
+    padding: 0.15rem;
+    width: fit-content;
+    padding-top: 110px;
+    margin-bottom: 110px
+}
+
+.dq-window-2 {
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    width: fit-content;
+}
+
+.dq-window-3 {
+    color: white;
+    background-color: #333333;
+    border-radius: 0.3rem;
+    padding: 1.0rem 0.75rem;
+    line-height: 2;
+    width: fit-content;
+}
+
+h1,h2,h3{
+    font-family: "misaki_gothic_2nd";
+    color: white
+}
+
+p{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+ul,p,small{
+    font-family: "NotoSansJP";
+}
+
+body {
+    background-color: #333333;
+}
+
+.body-inner {
+    background-color: #333333;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.section {
+    opacity: 0;
+    /* transition: opacity 1s ease, transform 1s ease; */ /* JSでアニメーションクラスを付与する場合、これは不要なことも */
+    /* transform: translateY(20px); */ /* 初期状態はJSで制御するので不要なことも */
+}
+
+.section.fade-in-up-active {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.text ,small{
+    color: white;
+}
+
+small {
+    display: block;
+    text-align: center;
+}
+
+.caption{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header {
+    background-color: #333333;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-inner {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    left: 0;
+}
+
+.title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    filter: invert(100%);
+}
+
+.image {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#my-icon{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+}
+
+.centering {
+    display: block;
+    text-align: center;
+}
+
+a:link {
+    color: #5050ee;
+}
+
+a:visited {
+    color: #7443ce;
+}
+
+#page-top {
+position: fixed;
+bottom: 20px;
+right: 20px;
+font-size: 14px;
+line-height: 1;
+z-index: 99;
+}
+#page-top a {
+background: #ffffff;
+text-decoration: none;
+color: #333333;
+font-family: "misaki_gothic_2nd";
+font-size: 13pt;
+width: 60px;
+padding: 28px 5px;
+text-align: center;
+display: block;
+border-radius: 90px;
+opacity: 0.9;
+transition: all .3s ease;
+}
+#page-top a:hover {
+text-decoration: none;
+opacity: .5;
+}
+
+/* Contact Page Styles */
+.contact-form-container {
+    margin: 30px 0;
+    padding: 0 2em;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "NotoSansJP";
+    color: white;
+    font-weight: bold;
+}
+
+.required {
+    color: #ff6b6b;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-family: "NotoSansJP";
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #5050ee;
+    box-shadow: 0 0 5px rgba(80, 80, 238, 0.5);
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-btn {
+    background-color: #5050ee;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-family: "misaki_gothic_2nd";
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #3939aa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Thank You Page Styles */
+.thankyou-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankyou-container .dq-window-3 {
+    padding: 2rem 3rem;
+}
+.btn-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.btn {
+    background-color: #5050ee;
+    color: white !important;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-family: "misaki_gothic_2nd";
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3939aa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
